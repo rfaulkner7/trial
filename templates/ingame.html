@@ -1,0 +1,23 @@
+{% extends "bootstrap/base.html" %} {% block navbar %}
+<nav class="navbar navbar-dark"></nav>
+{% endblock %} {% block content %}
+<body style="text-align:center">
+  <label>Game Mode: {{ data }}</label>
+  <br />
+  <label>Hero Name: {{ name }} </label>
+  <br />
+  <label>Credits: {{ credits }}</label>
+  <br />
+  <br />
+  <label>Attributes:</label>
+  <br />
+  <ul
+    style="margin-left: auto; margin-right: auto; width: 25vh; text-align: left;"
+  >
+    <li>Fighter {{ fighter }}</li>
+    <li>Pilot - {{ pilot }}</li>
+    <li>Merchant - {{ merchant }}</li>
+    <li>Engineer - {{ engineer }}</li>
+  </ul>
+</body>
+{% endblock %}

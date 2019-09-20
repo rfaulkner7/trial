@@ -1,0 +1,33 @@
+{% extends "bootstrap/base.html" %} {% block navbar %}
+<nav class="navbar navbar-dark"></nav>
+{% endblock %} {% block content %}
+<head></head>
+<body style="text-align:center">
+  <form method="POST">
+    <label>Player Name: </label>
+    {{ form.input_field(placeholder="input player name") }}
+    <br />
+    <br />
+    <label>Difficulty: </label>
+    {{ form.select_field() }}
+    <br />
+    <br />
+    <label>Fighter Level: </label>
+    {{ form.fighter_field() }}
+    <br />
+    <label>Pilot Level: </label>
+    {{ form.pilot_field() }}
+    <br />
+    <label>Merchant Level: </label>
+    {{ form.merchant_field() }}
+    <br />
+    <label>Engineer Level: </label>
+    {{ form.engineer_field() }}
+    <br />
+    <br />
+    {{ form.submit() }}
+    <br />
+    <label>{{ status }}</label>
+  </form>
+</body>
+{% endblock %}

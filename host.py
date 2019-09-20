@@ -36,7 +36,7 @@ def initialize():
 
     if form.is_submitted():
         difficulty = form.select_field.data
-        name = form.input_field.data
+        name = form.name_field.data
         try:
             fighter = int(form.fighter_field.data)
         except:
@@ -89,7 +89,7 @@ class DummyForm(FlaskForm):
     submit = SubmitField('Start a New Game')
 
 class FormTwo(FlaskForm):
-    input_field = StringField('Input')
+    name_field = StringField('Input')
     fighter_field = StringField('Fighter')
     pilot_field = StringField('Pilot')
     merchant_field = StringField('Merchant')
